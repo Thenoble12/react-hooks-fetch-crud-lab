@@ -1,5 +1,9 @@
 import React from "react";
 
+function handleSubmit(e) {
+  
+}
+
 function AdminNavBar({ onChangePage }) {
   return (
     <nav>

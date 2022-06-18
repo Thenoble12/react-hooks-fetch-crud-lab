@@ -22,7 +22,7 @@ function QuestionForm(props) {
     event.preventDefault();
     console.log(formData);
 
-    const questionData = {
+    const questionData = { 
       prompt: formData.prompt,
       answers: [formData.answer1, 
                 formData.answer2, 
@@ -38,7 +38,19 @@ function QuestionForm(props) {
       body: JSON.stringify(questionData),
     })
       .then((r) => r.json())
-      .then((newItem) => console.log(newItem))
+      .then((data) => {console.log(data)})
+
+      setFormData({
+          prompt: "",
+          answer1: "",
+          answer2: "",
+          answer3: "",
+          answer4: "",
+          correctIndex: 0,
+        
+      })
+
+      
   }
 
   return (
